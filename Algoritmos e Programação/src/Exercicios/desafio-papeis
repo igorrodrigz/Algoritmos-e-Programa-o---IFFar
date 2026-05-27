@@ -1,0 +1,30 @@
+package Exercicios;
+import java.util.Scanner;
+public class Desafiopapeis {
+	public static void main(String[] args) {
+	
+		Scanner entrada = new Scanner(System.in);
+		
+		int C, P, F, valor;
+		
+		System.out.println("Quantos competidores?");
+		C = entrada.nextInt();
+		
+		System.out.println("Quantos papeis o professor comprou");
+		P = entrada.nextInt();
+		
+		System.out.println("Quantos papeis cada competidor deverá receber?");
+		F = entrada.nextInt();
+		
+		valor = P/C;
+		if (valor >= F) {
+			System.out.println("SIM");
+		} else {
+			System.out.println("NÃO");
+		}
+		
+		
+	}
+	
+
+}
