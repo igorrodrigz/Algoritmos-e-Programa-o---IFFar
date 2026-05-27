@@ -1,88 +1,75 @@
-package Numeros;
-
+package Exercicios;
 import java.util.Scanner;
 
-public class Desafio {
-		public static void main(String[] args) {
-			
-			Scanner entrada = new Scanner(System.in);
-			String caract1, caract2, caract3;
-						
-			
-			//entradas
-			System.out.println("Digite a que grupo pertence o animal: ");
-			caract1 = entrada.next();
-			
-			// 1° grupo //vertebrado
-			if (caract1.equals("vertebrado")) {
-				System.out.println("é um vertebrado : "+caract1);
-				System.out.println("Digite a que grupo pertence o animal: ");
-				caract2 = entrada.next();
-				//classe ave
-				if (caract2.equals("ave")) {
-					System.out.println("é uma ave: "+caract2);
-					// alimentacao ave
-					System.out.println("Digite sobre a alimentação do animal: ");
-					caract3 = entrada.next();
-					
-					//alimentacao ave
-					if (caract3.equals("carnivoro")) {
-						System.out.println("é um carninovo: "+caract3);
-						System.out.println("é uma águia");
-					
-					} else {
-						System.out.println("É Onivoro");
-						System.out.println("É pombo");
-					}
+public class Desafioanimais {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		//pergunta 1
+		System.out.println("Vertebrado ou Invertebrado?");
+		String p1 = entrada.next();
+		
+		//inicia vertebrado
+		if (p1.equals("vertebrado")) {
+			//pergunta 2
+			System.out.println("Ave ou Mamifero?");
+			String p2 = entrada.next();
+			//inicia aves
+			if (p2.equals("ave")) {
+				//inicia pergunta 3
+				System.out.println("Carnivoro ou Onivoro");
+				String p3 = entrada.next();
+				if (p3.equals("carnivoro")) {
+					System.out.println("Águia!");
+				} else {
+					//senão é aguia então:
+					System.out.println("pomba!");
 				}
-				//mamifero
-				if (caract2.equals("mamifero")) {
-					System.out.println("é um mamifero: "+caract2);
-					//alimentacao mamifero
-					System.out.println("Digite sobre a alimentação do animal: ");
-					caract3 = entrada.next();
-					
-					if (caract3.equals("onivoro")) {
-						System.out.println("é um hominídeo.");
-					} else {
-						System.out.println("é um herbivoro bovino");
-						System.out.println("é o boi");
-					}
-					
-					
-				}
-				
-					
-			// 2° grupo // invertebrado
+				//se não é ave então é mamifero: (pergunta 2)
 			} else {
-				//classe inseto
-				Sy		
-					}
-			
-			
-			
-			//fim
+				//inicia pergunta 3
+				System.out.println("Onivoro ou Herbivoro");
+				String p3 = entrada.next();
+				if (p3.equals("onivoro")) {
+					System.out.println("homem");
+				} else {
+					//se não é homem então:
+					System.out.println("vaca");
 				}
 			}
 			
 			
-			
-			
-			
-	
-
-		
-
-
-
-
-/*Neste problema, você deverá ler 3 palavras que definem o tipo de animal possível
-segundo o esquema abaixo, da esquerda para a direita. Em seguida conclua qual
-dos animais seguintes foi escolhido, através das três palavras fornecidas.
- */
-
-/* Entrada
-A entrada contém 3 palavras, uma em cada linha, necessárias para identificar o
-animal segundo a figura acima, com todas as letras minúsculas.
-Saída
-Imprima o nome do animal correspondente à entrada fornecida.  */
+		//se não é vertebrado então:(pergunta 1)	
+		} else {
+			//inicia pergunta 2
+			System.out.println("inseto ou anelídeo? ");
+			String p2 = entrada.next();
+			if (p2.equals("inseto")) {
+				//pergunta 3
+				System.out.println("hematofago ou herbivoro?");
+				String p3 = entrada.next();
+				if (p3.equals("hematofago")) {
+					System.out.println("pulga!");
+			} else {
+				//se não é hematofago então...
+				System.out.println("lagarta");
+			}
+				
+			} else {
+				//pergunta 3
+				System.out.println("hematofago ou onivoro?");
+				String p3 = entrada.next();
+				// se hematofago então:
+				if (p3.equals("hematofago")) {
+					System.out.println("sanguessuga");
+				} else {
+					//se não hematofago então:
+					System.out.println("minhoca");
+				}
+			}
+		}
+		//encerra entrada
+		entrada.close();
+		//fim do programa
+	}
+}
